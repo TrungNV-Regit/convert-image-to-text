@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Image To Text</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='./tesseract.js'></script>
+</head>
+
+<body>
+    <form action="">
+        <div class="m20 input-wrapper">
+            <label for="file">Choose File</label>
+            <input type="file" id="file" name="filename">
+        </div>
+        <div class="m20 d-none" id="previewContainer">
+            <img id="preview" alt="Preview image" class="m20" />
+            <button type="button" onclick="convert()" id="buttonConvert">Convert</button>
+            <button type="reset" id="reset">Reset</button>
+        </div>
+        <div class="m20">
+            <label><b>Your Converted Text:</b></label><br><br>
+            <textarea cols="30" rows="10" id="convertedText" readonly></textarea>
+        </div>
+    </form>
+    <div class="container-loading d-none" id="loading">
+        <div class="loader">
+            <div class="shadow"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="index.js"></script>

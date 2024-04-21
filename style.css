@@ -1,0 +1,109 @@
+body {
+  margin: 10px;
+}
+
+.input-wrapper input {
+  display: none;
+}
+
+.input-wrapper label {
+  cursor: pointer;
+}
+
+.d-none {
+  display: none;
+}
+
+img {
+  display: block;
+  width: 300px;
+  height: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 3px;
+  background: #3891a5;
+  border-color: #3891a5;
+  color: #ffffff;
+  box-shadow: #3891a5;
+}
+
+.m20 {
+  margin: 20px 0;
+}
+
+textarea {
+  width: 100%;
+  outline: none;
+}
+
+.container-loading {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.loader {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+}
+
+.box {
+  width: 50px;
+  height: 40px;
+  background: #ffffff;
+  animation: animation 0.5s linear infinite;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+}
+
+.shadow {
+  width: 50px;
+  height: 5px;
+  background: #000000;
+  opacity: 0.1;
+  position: absolute;
+  top: 59px;
+  left: 0;
+  border-radius: 50%;
+  animation: shadow 0.5s linear infinite;
+}
+
+@keyframes shadow {
+  100% {
+    transform: scale(1.2, 1);
+  }
+}
+
+@keyframes animation {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9s) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) calc(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 110px;
+  }
+}
